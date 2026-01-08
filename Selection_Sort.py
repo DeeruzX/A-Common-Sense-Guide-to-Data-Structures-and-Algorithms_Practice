@@ -2,7 +2,6 @@ def selection_sort(arr: list[int]) -> list[int]:
     for i in range(len(arr)):
         lowest_index = i
         for x in range(i+1, len(arr)):
-            print(arr)
             if arr[x] < arr[lowest_index]:
                 lowest_index = x
 
