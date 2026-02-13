@@ -52,6 +52,13 @@ class TreeNode:
             nodeToDelete.value = node.value
             return node.rightChild
 
+    def traverse_and_print(self, node):
+        if node is None:
+            return
+        self.traverse_and_print(node.leftChild)
+        print(node.value)
+        self.traverse_and_print(node.rightChild)
+
     def display(self, node=None, level=0):
         if node is None:
             node = self
@@ -71,6 +78,7 @@ node_1.rightChild = TreeNode(12)
 
 node_2.leftChild = TreeNode(17)
 node_2.rightChild = TreeNode(25)
-
+root.traverse_and_print(root)
 root.display()
+
 
